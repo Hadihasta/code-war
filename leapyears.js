@@ -16,7 +16,10 @@
 const year = 0;
 
 function yearDays(year) {
-  if (year % 4 == 0) {
+  if (
+    year % 4 == 0 &&
+    (year % 100 != 0 || year % 400 == 0)
+  ) {
     console.log(`${year} has 366 days`);
   } else {
     console.log(`${year} has 365 days `);
